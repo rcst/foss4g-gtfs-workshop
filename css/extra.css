@@ -1,0 +1,29 @@
+/*-- CUSTOM CLASSES FOR TEXT EMPHASIS --*/
+.blue       { color:   rgb(60, 55, 110); }
+.green      { color:   rgb(98, 166, 10) }
+.pink       { color:   #AE2573 }
+.red        { color:   rgb(206, 55, 40); }
+.warmyellow { color:   #FFB81C }
+
+.xlarge { 
+     font-size: 150%
+}
+.large { 
+     font-size: 130% 
+}
+.medium {
+     font-size: 80%
+}
+.small { 
+     font-size: 70% 
+}
+.xsmall {
+     font-size: 50%
+}
+
+
+.xlarge .remark-code { font-size: 150% }
+.large .remark-code { font-size: 130% }
+.medium .remark-code { font-size: 80% }
+.small .remark-code { font-size: 70% }
+.xsmall .remark-code { font-size: 50% }

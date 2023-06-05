@@ -1,0 +1,90 @@
+---
+title: "Integrating GTFS Transit Data with Spatial Analysis"
+subtitle: "in R"
+author: "Eric Stemmler"
+date: "2023/06/27"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default", "default-fonts", "css/extra.css"]
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+params:
+  www: "https://rcst.netlify.app/doc/presentations/foss4f-gtfs-workshop/"
+---
+
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(data.table)
+library(qrencoder)
+knitr::opts_chunk$set(echo = TRUE, 
+		      dpi = 300)
+
+# generate qr code as svg
+f <- file("img/qr.svg")
+writeLines(text = qrencode_svg(to_encode = params$www), con = f)
+close(f)
+options()
+```
+
+# What you'll learn
+
+- GTFS 
+
+- Import GTFS data into R and link it with spatial data
+
+- Conduct spatial analyses on transit data in R
+
+- Visualize transit data using spatial maps and charts
+
+---
+
+# Follow Along
+
+.pull-left[
+```{r, out.width = "75%"}
+knitr::include_graphics("img/qr.svg")
+```
+
+`r params$www`
+]
+
+--
+
+.pull-right[
+```{r, R.options=list(width = 80)}
+sessionInfo()
+```
+]
+
+---
+
+# On the history of GTFS
+
+https://transloc.com/blog/what-is-gtfs-why-does-it-matter-public-transit/
+
+---
+
+# GTFS - Sources and Examples 
+
+https://transitfeeds.com/
+
+---
+
+# R Packages
+
+- [tidytransit](https://r-transit.github.io/tidytransit/index.html)
+- [gtfstools]()
+- ... depends on [gtfsio](https://ipeagit.github.io/gtfstools/)
+- ... depends on [data.table]() :)
+
+---
+
+```{r, eval = FALSE}
+install.packages("gtfstools")
+```
+
